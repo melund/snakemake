@@ -415,7 +415,7 @@ def test_conda_cmd_exe():
     run(dpath("test_conda_cmd_exe"), use_conda=True)
 
 
-@skip_on_windows  # Conda support is partly broken on Win
+@skip_on_windows  # wrapper uses non widnows dependency htslib
 def test_wrapper():
     run(dpath("test_wrapper"), use_conda=True)
 
@@ -1117,7 +1117,7 @@ def test_github_issue640():
     )
 
 
-@skip_on_windows  # TODO check whether this might be enabled later
+#@skip_on_windows 
 def test_generate_unit_tests():
     tmpdir = run(
         dpath("test_generate_unit_tests"),
