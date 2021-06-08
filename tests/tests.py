@@ -1228,10 +1228,5 @@ def test_source_path():
     run(dpath("test_source_path"), snakefile="workflow/Snakefile")
 
 def test_produce_target():
-    import debugpy
-    # 5678 is the default attach port in the VS Code debug configurations. Unless a host and port are specified, host defaults to 127.0.0.1
-    debugpy.listen(5678)
-    print('Waiting for debugger attach')
-    debugpy.wait_for_client()
     
-    run(dpath("test_conda_cmd_exe"), targets=['subfolder\\test2.out2'])
+    run(dpath("test_produce_target"), targets=['subfolder/test2.out2'])
